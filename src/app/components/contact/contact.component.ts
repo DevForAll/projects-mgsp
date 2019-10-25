@@ -8,17 +8,17 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-contactForm:FormGroup;
-disabledSubmitButton: boolean = true;
-optionSelect:Array<any>;
+// contactForm:FormGroup;
+// disabledSubmitButton: boolean = true;
+// optionSelect:Array<any>;
 
-  @HostListener('input') oninput() {
-    if (this.contactForm.valid){
-      this.disabledSubmitButton = false;
-    }
-  }
+  // @HostListener('input') oninput() {
+  //   if (this.contactForm.valid){
+  //     this.disabledSubmitButton = false;
+  //   }
+  // }
 
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
   ngOnInit() {
   }
