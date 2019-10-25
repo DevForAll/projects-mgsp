@@ -1,4 +1,6 @@
-<div class="container">
-    <h1>{{front}}</h1>
-        
+<div class="container" *ngFor='let item of content'>
+    <h1>{{item.front}}</h1>
+    <h1>{{item.frontText}}</h1>
+    <h1>{{item.mission}}</h1>
+    <h1>{{item.vision}}</h1>
 </div>

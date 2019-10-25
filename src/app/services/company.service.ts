@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class CompanyService {
     
    }
 
-   getContent(){
-     return this.contentService;
+   getContent(): Observable<any[]>{
+     return of(this.contentService);
    }
 }

@@ -10,11 +10,15 @@ export class CompanyComponent implements OnInit {
 
   content:any[] = [];
 
-  constructor(private _servicio: CompanyService) { 
-    this.content = _servicio.getContent();
-  }
-
-  ngOnInit() {
+  constructor(private serviceContent: CompanyService) { 
   }
   
+  ngOnInit() {
+    this.getContentData();
+  }
+
+  getContentData(): void{
+    this.serviceContent.getContent()
+      .subscribe(content => this.content = content);
+  }
 }
